@@ -144,6 +144,31 @@ form{
     width: 100%;
   }
 }
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  margin-top: -500px;
+
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.8;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 </style>
 
 
@@ -171,7 +196,7 @@ form{
   
     <div class="mySlides fade">
       
-      <img src="lec.png" style="width:100%">
+      <img src="lec.png" style="width:100%;height: 100%;">
       
     </div>
   
@@ -180,11 +205,21 @@ form{
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
   </div>
-  <br>
-  <img class="col"src="pucle.png" style="margin-left: 20px; width: 330px; height: 205px;float: left;">
-  <img src="cosplay.png" style="width: 330px; height: 205px;">
-  <img src="lec.png" style="width: 330px; height: 205px;float: right;">
 
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="pucle.png" style="width:100%; height: 14.5cm;border:solid black 0.35cm;" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="cosplay.png" style="width:100%; height: 14.5cm;border-top:solid black 0.35cm;border-bottom:solid black 0.35cm;" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="lec.png" style="width:100%; height: 14.5cm;border:solid black 0.35cm;" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+  
+  </div>
+</div>
 
   
 
